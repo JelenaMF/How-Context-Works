@@ -64,17 +64,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="scoreboard">
-        <Header players={this.state.players} />
+      <Provider>
+        <div className="scoreboard">
+          <Header players={this.state.players} />
 
-        <PlayerList 
-          players={this.state.players} 
-          changeScore={this.handleScoreChange}
-          removePlayer={this.handleRemovePlayer}   
-        />
-        
-        <AddPlayerForm addPlayer={this.handleAddPlayer} />
-      </div>
+          <PlayerList 
+            players={this.state.players} 
+            changeScore={this.handleScoreChange}
+            removePlayer={this.handleRemovePlayer}   
+          />
+          
+          <AddPlayerForm addPlayer={this.handleAddPlayer} />
+        </div>
+      </Provider>
     );
   }
 }
