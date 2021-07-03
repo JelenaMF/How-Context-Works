@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import { Provider } from './Context';
 import PlayerList from './PlayerList';
 import AddPlayerForm from './AddPlayerForm';
 
